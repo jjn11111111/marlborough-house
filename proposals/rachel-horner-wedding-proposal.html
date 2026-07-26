@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Marlborough House | Rachel Horner Wedding Proposal</title>
+  <style>
+    :root {
+      --paper: #fbf7ef;
+      --surface: #fffdf8;
+      --ink: #27211b;
+      --muted: #6e6256;
+      --gold: #e4a915;
+      --gold-soft: #f4df9b;
+      --green: #314d42;
+      --burgundy: #7b3831;
+      --line: #e7dccb;
+      --shadow: 0 14px 35px rgba(44, 32, 23, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(228, 169, 21, 0.12), transparent 34rem),
+        linear-gradient(180deg, #fffaf0 0%, var(--paper) 38%, #f7efe4 100%);
+    }
+
+    .document { max-width: 980px; margin: 0 auto; padding: 34px 28px 56px; }
+
+    .page {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      margin: 0 0 28px;
+      overflow: hidden;
+      page-break-after: always;
+    }
+
+    .page:last-child { page-break-after: auto; }
+    .page-inner { padding: 42px 48px 46px; }
+
+    .cover {
+      min-height: 920px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      position: relative;
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(228, 169, 21, 0.42);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .cover-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 42px 48px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo { width: 260px; height: auto; display: block; }
+
+    .contact-card {
+      color: var(--muted);
+      font-size: 12.5px;
+      text-align: right;
+      line-height: 1.45;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .cover-main {
+      display: grid;
+      align-content: center;
+      padding: 32px 58px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--burgundy);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      margin: 0 0 16px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    h1 { color: var(--green); font-size: 58px; max-width: 760px; }
+    h2 { color: var(--green); font-size: 40px; }
+    h3 { color: var(--green); font-size: 25px; margin-bottom: 10px; }
+
+    .subtitle { color: var(--muted); font-size: 21px; margin: 20px 0 0; max-width: 680px; }
+
+    .cover-band {
+      background: linear-gradient(135deg, var(--green), #253a33);
+      color: #fff8e8;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+      margin: 0 48px 48px;
+      padding: 24px 28px;
+      border-radius: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-band strong {
+      color: var(--gold-soft);
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .cover-band p { margin: 0; color: rgba(255, 248, 232, 0.84); }
+
+    .toc { display: grid; gap: 9px; font-size: 13px; }
+    .toc span { border-bottom: 1px solid rgba(255, 248, 232, 0.22); padding-bottom: 6px; }
+
+    .section-header {
+      border-bottom: 2px solid var(--line);
+      display: grid;
+      gap: 9px;
+      margin-bottom: 26px;
+      padding-bottom: 18px;
+    }
+
+    .section-kicker {
+      color: var(--burgundy);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    p { margin: 0 0 12px; }
+    .lead { color: var(--muted); font-size: 17px; max-width: 760px; }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: #fffaf2;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      break-inside: avoid;
+    }
+
+    .tag {
+      background: rgba(228, 169, 21, 0.15);
+      border: 1px solid rgba(228, 169, 21, 0.34);
+      border-radius: 999px;
+      color: #6b5010;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      text-transform: uppercase;
+    }
+
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 0 0 7px; }
+
+    .note {
+      background: rgba(49, 77, 66, 0.08);
+      border-left: 4px solid var(--green);
+      color: var(--muted);
+      margin-top: 20px;
+      padding: 14px 16px;
+    }
+
+    .table {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 11px 14px;
+    }
+
+    .row:nth-child(odd) { background: #fff9ee; }
+    .row + .row { border-top: 1px solid var(--line); }
+    .row strong { color: var(--green); }
+    .row .amount { color: var(--burgundy); font-weight: 800; white-space: nowrap; }
+    .row .desc { grid-column: 1 / -1; color: var(--muted); font-size: 13px; margin-top: -4px; padding-bottom: 2px; }
+    .row.subhead { background: rgba(49, 77, 66, 0.12); font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+    .row.subhead span { color: var(--green); }
+    .row.total { background: rgba(123, 56, 49, 0.08); font-size: 16px; }
+    .row.total strong { font-family: Georgia, "Times New Roman", serif; font-size: 18px; }
+    .row.total .amount { font-size: 20px; }
+    .row.tbd .amount { color: var(--muted); font-style: italic; font-weight: 600; }
+
+    .timeline { display: grid; gap: 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .timeline-item:last-child { border-bottom: 0; }
+    .timeline-time { color: var(--burgundy); font-weight: 800; font-size: 13px; letter-spacing: 0.04em; }
+
+    .layout-diagram {
+      background: #fffaf2;
+      border: 1px dashed var(--line);
+      border-radius: 18px;
+      font-size: 13px;
+      line-height: 1.45;
+      padding: 20px;
+    }
+
+    .layout-diagram pre {
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .fine-print { color: var(--muted); font-size: 12px; margin-top: 14px; }
+    .policy-list { color: var(--muted); font-size: 13px; }
+    .policy-list li { margin-bottom: 10px; }
+
+    .signature-block {
+      display: grid;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .signature-line {
+      border-bottom: 1px solid var(--ink);
+      min-height: 28px;
+      margin-top: 36px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      display: flex;
+      font-size: 11px;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding-top: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    @media print {
+      @page { size: Letter; margin: 0.42in; }
+      html, body { background: #fffdf8 !important; font-size: 12.2px; }
+      .document { max-width: none; padding: 0; }
+      .page { border: 0; border-radius: 0; box-shadow: none; margin: 0; }
+      .page-inner { padding: 0; }
+      .cover { min-height: 9.75in; }
+      h1 { font-size: 46px; }
+      h2 { font-size: 31px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="document">
+
+    <!-- COVER -->
+    <section class="page cover">
+      <div class="cover-top">
+        <img class="logo" src="../assets/marlborough-house-logo.png" alt="The Marlborough House logo">
+        <div class="contact-card">
+          9 Ling Street<br>
+          Marlborough, NH 03455<br>
+          Office: 603-876-0004<br>
+          TheMarlboroughHouse.com<br>
+          info@TheMarlboroughHouse.com
+        </div>
+      </div>
+
+      <div class="cover-main">
+        <p class="eyebrow">Event Proposal</p>
+        <h1>Rachel Horner Wedding</h1>
+        <p class="subtitle">A custom Package 3 celebration with full compound buyout, an in-the-round ceremony, and a vignette-style reception for 100 guests — alcohol-free throughout.</p>
+      </div>
+
+      <div class="cover-band">
+        <div>
+          <strong>Historic house warmth. Modern event ease.</strong>
+          <p>Prepared for Rachel Horner · Concord, NH area · July 2027 (date TBD)<br>
+          Guest count: 100 · Package 3 · Full property buyout Fri PM – Sun PM</p>
+        </div>
+        <div class="toc">
+          <span>Event Overview & Timeline</span>
+          <span>Ceremony & Reception Design</span>
+          <span>À La Carte Pricing</span>
+          <span>Terms & Signature</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Client & Event</div>
+          <h2>Event Overview</h2>
+          <p class="lead">This proposal outlines a full-weekend compound buyout at The Marlborough House for Rachel Horner. All services are priced separately below so selections can be adjusted before contract execution.</p>
+        </header>
+
+        <div class="grid two">
+          <div class="card">
+            <span class="tag">Client</span>
+            <h3>Rachel Horner</h3>
+            <ul>
+              <li>Concord, NH area</li>
+              <li>Contact info: <em>TBD</em></li>
+              <li>Estimated guest count: <strong>100</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Weekend</span>
+            <h3>Full Compound Buyout</h3>
+            <ul>
+              <li><strong>Check-in:</strong> Friday afternoon</li>
+              <li><strong>Check-out:</strong> Sunday, early afternoon</li>
+              <li>Exclusive use of Main Hall, Main House, Bunkhouse, and all on-site guest rooms</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 28px;">Wedding Day Timeline</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">Fri PM</div>
+            <div>Compound check-in. Wedding party and close family settle into on-site accommodations. Quiet setup continues in Main Hall.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">Sat AM</div>
+            <div>Bridal suites and Main House available for preparation. TMH completes in-the-round ceremony setup and sound check.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">3:30 PM</div>
+            <div>Guest invitation / arrival to Main Hall. Cucumber water at pre-function.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">4:00 PM</div>
+            <div><strong>Ceremony</strong> — presidium / in-the-round format. Couple at center of room; guests seated around them with a defined aisle for the processional.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">~4:30 PM</div>
+            <div>Guests proceed to the <strong>Main House first floor</strong> for cocktail hour.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">~5:30 PM</div>
+            <div>Guests return to a fully reset Main Hall for reception, dinner stations, dancing, and dessert.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">Evening</div>
+            <div>Passed hors d'oeuvres (selections TBD), action stations, client-provided cake display, coffee & tea. <strong>No alcoholic beverages</strong> served at any point.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">Sun PM</div>
+            <div>Compound check-out, early afternoon.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Alcohol-free event.</strong> This celebration will not include bar service of any kind. All beverage service is non-alcoholic: cucumber water, iced tea, lemonade, and coffee & tea with dessert.
+        </div>
+
+        <footer class="footer">
+          <span>Rachel Horner Proposal</span>
+          <span>Event Overview</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- CEREMONY & RECEPTION DESIGN -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Design</div>
+          <h2>Ceremony & Reception</h2>
+          <p class="lead">A fresh, youthful layout that puts the couple at the heart of the room and keeps guests close throughout the evening.</p>
+        </header>
+
+        <div class="grid two">
+          <div class="card">
+            <span class="tag">Ceremony</span>
+            <h3>In-the-Round / Presidium</h3>
+            <ul>
+              <li>Ceremony staged at the <strong>center of Main Hall</strong> where the dance floor will later open.</li>
+              <li>100 white folding chairs with white chair covers (Package 3) arranged around the couple.</li>
+              <li>Defined aisle for processional; bridal party of <strong>6 bridesmaids</strong> and <strong>6 groomsmen</strong>.</li>
+              <li>White drape and expanded lighting package to frame the ceremony zone.</li>
+              <li>House sound available for ceremony music and later DJ/band.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="tag">Bridal Party</span>
+            <h3>Personal Flower Suite</h3>
+            <ul>
+              <li>1 bridal bouquet</li>
+              <li>1 groom boutonniere</li>
+              <li>6 bridesmaid bouquets</li>
+              <li>6 groomsman boutonnieres</li>
+              <li>Parent corsages / additional personal flowers available on request (TBD)</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 28px;">Reception Layout — 100 Guests in Vignettes</h3>
+        <p>After cocktail hour, Main Hall resets into conversational vignettes surrounding the central dance floor (the same center where the ceremony took place).</p>
+
+        <div class="layout-diagram">
+          <pre>
+    ┌─────────────────────────────────────────────────────────────┐
+    │  STAGE AREA — mixed-seating vignettes (2 × 10 guests)       │
+    ├──────────────┬──────────────────────────────┬───────────────┤
+    │  Round       │                              │  Round        │
+    │  vignette    │      CENTRAL DANCE FLOOR     │  vignette     │
+    │  (10)        │   (former ceremony center)   │  (10)         │
+    ├──────────────┤                              ├───────────────┤
+    │  High comm.  │                              │  High comm.   │
+    │  table (10)  │                              │  table (10)   │
+    ├──────────────┼──────────────┬───────────────┼───────────────┤
+    │  Mixed       │  PASTA       │  SALAD        │  Mixed        │
+    │  seating     │  STATION     │  STATION      │  seating      │
+    │  vignette    │              │               │  vignette     │
+    │  (10)        │  POTATO BAR (action station area)           │
+    └──────────────┴──────────────┴───────────────┴───────────────┘
+
+    4 round-table vignettes (10 each) · 2 high communal tables (10 each)
+    4 mixed lounge vignettes (10 each) · stage vignettes · open center dance floor
+          </pre>
+        </div>
+
+        <div class="grid two" style="margin-top: 18px;">
+          <div class="card">
+            <h3>Cocktail Hour — Main House</h3>
+            <ul>
+              <li>Charcuterie and artisan cheese boards</li>
+              <li>Cucumber water</li>
+              <li>Iced tea</li>
+              <li>Fresh lemonade</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Reception — Action Stations</h3>
+            <ul>
+              <li><strong>Pasta station</strong> — marinara, alfredo, fresh herbs & cheeses, bread service</li>
+              <li><strong>Salad station</strong> — spring mix, toppings, dressings</li>
+              <li><strong>Mashed potato bar</strong> — sour cream, chives, bacon, cheese, butter, and more</li>
+              <li><strong>Passed hors d'oeuvres</strong> — selections TBD (see menu options below)</li>
+              <li><strong>Dessert</strong> — cake provided by client; TMH provides attractive display & service</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span>The Marlborough House</span>
+          <span>Ceremony & Reception Design</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- PACKAGE 3 DETAIL -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Venue Package</div>
+          <h2>Wedding Package 3</h2>
+          <p class="lead">Planning & Tableware — full TMH setup, breakdown, and day-of coordination. Pricing below reflects a mid-range Package 3 fee; final fee may adjust for peak/off-peak date once your July 2027 date is confirmed.</p>
+        </header>
+
+        <div class="card">
+          <span class="tag">Included in Package 3</span>
+          <div class="grid two">
+            <ul>
+              <li>Main Hall rental — ceremony through reception (9:00 AM – 12:00 midnight event day)</li>
+              <li>Main House — prep, cocktail hour, suites, green room</li>
+              <li>100 white folding chairs with white chair covers</li>
+              <li>10 × 60" round tables, buffet tables, linens, napkins</li>
+              <li>Expanded lighting/sound — tree-branch ceiling designs & color wash</li>
+              <li>House sound system for DJ or band</li>
+              <li>Custom/rental linens, flatware, glassware, tableware</li>
+            </ul>
+            <ul>
+              <li>TMH sets ceremony (in-the-round layout) and full reception vignettes</li>
+              <li>Linens, centerpieces placement, and table settings staged on all vignettes</li>
+              <li>Complete breakdown and cleanup at end of night</li>
+              <li>Day-of planner and coordinator on site</li>
+              <li>Pre- and post-coordination of vendors; delivery/drop-off scheduling</li>
+              <li>Room flip from ceremony to reception included</li>
+            </ul>
+          </div>
+          <p class="fine-print">Client remains responsible for final vendor orders and invoices unless otherwise noted. Catering priced separately below. No bar service on this event.</p>
+        </div>
+
+        <footer class="footer">
+          <span>Package 3</span>
+          <span>Facility & Coordination</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Investment</div>
+          <h2>À La Carte Pricing</h2>
+          <p class="lead">Every line item is priced separately. Adjustments to guest count, passed selections, or accommodations will revise the totals before signing.</p>
+        </header>
+
+        <div class="table">
+          <div class="row subhead"><span>Venue & Coordination</span><span></span></div>
+          <div class="row">
+            <strong>Wedding Package 3 — Planning & Tableware</strong>
+            <span class="amount">$5,000.00</span>
+          </div>
+          <div class="row">
+            <strong>In-the-round ceremony design & enhanced draping</strong>
+            <span class="amount">$350.00</span>
+            <span class="desc">Presidium layout, aisle definition, drape treatment for central ceremony zone</span>
+          </div>
+          <div class="row">
+            <strong>Vignette lounge furniture staging</strong>
+            <span class="amount">$950.00</span>
+            <span class="desc">Mixed seating vignettes — loveseats, one-off chairs, ottomans, high communal tables, stage placement</span>
+          </div>
+
+          <div class="row subhead"><span>Full Compound Buyout — Accommodations (2 nights)</span><span></span></div>
+          <div class="row">
+            <strong>Bunkhouse</strong>
+            <span class="amount">$2,000.00</span>
+            <span class="desc">Fri PM – Sun PM · sleeps 6+</span>
+          </div>
+          <div class="row">
+            <strong>King Suite — shower & jacuzzi bath</strong>
+            <span class="amount">$700.00</span>
+            <span class="desc">$350 / night × 2 nights</span>
+          </div>
+          <div class="row">
+            <strong>King room — shared bath</strong>
+            <span class="amount">$300.00</span>
+            <span class="desc">$150 / night × 2 nights</span>
+          </div>
+          <div class="row">
+            <strong>Full room — shared bath</strong>
+            <span class="amount">$300.00</span>
+            <span class="desc">$150 / night × 2 nights</span>
+          </div>
+          <div class="row">
+            <strong>Early Friday check-in</strong>
+            <span class="amount">$150.00</span>
+          </div>
+
+          <div class="row subhead"><span>Personal Flowers</span><span></span></div>
+          <div class="row">
+            <strong>Bridal bouquet</strong>
+            <span class="amount">$100.00</span>
+          </div>
+          <div class="row">
+            <strong>Groom boutonniere</strong>
+            <span class="amount">$25.00</span>
+          </div>
+          <div class="row">
+            <strong>Bridesmaid bouquets (6 @ $65)</strong>
+            <span class="amount">$390.00</span>
+          </div>
+          <div class="row">
+            <strong>Groomsman boutonnieres (6 @ $25)</strong>
+            <span class="amount">$150.00</span>
+          </div>
+
+          <div class="row subhead"><span>Cocktail Hour — Main House (100 guests)</span><span></span></div>
+          <div class="row">
+            <strong>Charcuterie & artisan cheese boards</strong>
+            <span class="amount">$1,500.00</span>
+            <span class="desc">$15.00 / guest × 100</span>
+          </div>
+          <div class="row">
+            <strong>Non-alcoholic beverages — cucumber water, iced tea, lemonade</strong>
+            <span class="amount">$350.00</span>
+            <span class="desc">$3.50 / guest × 100 · service & replenishment throughout cocktail hour</span>
+          </div>
+
+          <div class="row subhead"><span>Reception — Action Stations (100 guests)</span><span></span></div>
+          <div class="row">
+            <strong>Pasta action station</strong>
+            <span class="amount">$1,400.00</span>
+            <span class="desc">$14.00 / guest — marinara, alfredo, fresh herbs & cheeses, bread service</span>
+          </div>
+          <div class="row">
+            <strong>Spring mix salad station</strong>
+            <span class="amount">$800.00</span>
+            <span class="desc">$8.00 / guest — toppings and dressings</span>
+          </div>
+          <div class="row">
+            <strong>Mashed potato bar</strong>
+            <span class="amount">$1,000.00</span>
+            <span class="desc">$10.00 / guest — sour cream, chives, bacon, cheese, butter & more</span>
+          </div>
+          <div class="row">
+            <strong>Station service staff & replenishment</strong>
+            <span class="amount">$400.00</span>
+            <span class="desc">$4.00 / guest — attendants for all action stations</span>
+          </div>
+          <div class="row tbd">
+            <strong>Passed hors d'oeuvres — selections TBD</strong>
+            <span class="amount">$750.00 est.</span>
+            <span class="desc">Placeholder for 3 passed selections for 100 guests — final menu & price at tasting</span>
+          </div>
+          <div class="row">
+            <strong>Client-provided cake — display & service</strong>
+            <span class="amount">$200.00</span>
+            <span class="desc">Attractive presentation, plates, and service; cake supplied by client</span>
+          </div>
+          <div class="row">
+            <strong>Coffee & tea station</strong>
+            <span class="amount">$275.00</span>
+            <span class="desc">$2.75 / guest × 100 — milk, cream, sugar, honey, substitutes</span>
+          </div>
+
+          <div class="row subhead"><span>Bar Service</span><span></span></div>
+          <div class="row">
+            <strong>Alcoholic beverage service</strong>
+            <span class="amount">$0.00</span>
+            <span class="desc">Not included — alcohol-free event</span>
+          </div>
+
+          <div class="row subhead"><span>Production</span><span></span></div>
+          <div class="row">
+            <strong>Labor — pre-set, pre-production, post-production (10% of subtotal)</strong>
+            <span class="amount">$1,709.00</span>
+          </div>
+
+          <div class="row total">
+            <strong>Estimated Total</strong>
+            <span class="amount">$18,799.00</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Passed hors d'oeuvres — suggested starting points (TBD at tasting):</strong>
+          Caprese bruschetta (50 pc / $100) · Stuffed mushrooms (50 pc / $75) · Spanakopita (50 pc / $125) · Honey garlic chicken skewers (30 pc / $75) · Mini chicken & waffles (50 pc / $100). Final selections and quantity will adjust the $750 placeholder above.
+        </div>
+
+        <footer class="footer">
+          <span>Rachel Horner Proposal</span>
+          <span>À La Carte Pricing</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- PAYMENT & TERMS -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Next Steps</div>
+          <h2>Payment Schedule & Terms</h2>
+        </header>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Payment Schedule</h3>
+            <p>Based on estimated total of <strong>$18,799.00</strong> at 100 guests:</p>
+            <div class="table" style="margin-top: 12px;">
+              <div class="row"><strong>Non-refundable deposit (½ of total)</strong><span class="amount">$9,399.50</span></div>
+              <div class="row"><strong>Second payment (⅓ of total) — 1 month prior</strong><span class="amount">$6,266.33</span></div>
+              <div class="row"><strong>Final balance — 2 weeks prior</strong><span class="amount">$3,133.17</span></div>
+            </div>
+            <p class="fine-print">Final invoice adjusts to confirmed guest count. Count due in writing one month prior to event.</p>
+          </div>
+          <div class="card">
+            <h3>Security Deposit</h3>
+            <p>A <strong>$500 refundable security deposit</strong> (check) is required and held until the end of the event, covering potential property damage or policy violations.</p>
+            <p class="fine-print">Because this is an alcohol-free event, outside beverage policies still apply to any unauthorized alcohol brought on premises.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 28px;">Terms & Conditions</h3>
+        <ul class="policy-list">
+          <li>Services will not be secured unless this proposal is executed and accompanied by a non-refundable deposit equal to ½ of the total cost of the event.</li>
+          <li>Second payment of ⅓ of the total cost is due one month prior to the event.</li>
+          <li>The remaining balance is due two (2) weeks prior to the event.</li>
+          <li>All payments are forfeited if the event is canceled or rescheduled.</li>
+          <li>A 10% late fee will be applied to any open invoices beyond their due date.</li>
+          <li>Final guest count due one month prior via email to info@themarlboroughhouse.com. If no revised count is received, no adjustments will be made to the final invoice.</li>
+          <li>20% gratuity applies to catering when provided by The Marlborough House (included in per-guest station pricing above).</li>
+          <li>Consuming alcoholic beverages in the Town of Marlborough municipal parking lot or on the street is strictly prohibited.</li>
+        </ul>
+
+        <div class="signature-block">
+          <p>By signing below, you accept the proposal of services as outlined above.</p>
+          <div class="grid two">
+            <div>
+              <p><strong>Signature of Client</strong></p>
+              <div class="signature-line"></div>
+              <p class="fine-print">Rachel Horner &nbsp;&nbsp; Date ______________</p>
+            </div>
+            <div>
+              <p><strong>Signature of TMH Representative</strong></p>
+              <div class="signature-line"></div>
+              <p class="fine-print">Jeremy Shepard &nbsp;&nbsp; Date ______________</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="card" style="margin-top: 28px; text-align: center;">
+          <img class="logo" src="../assets/marlborough-house-logo.png" alt="The Marlborough House logo" style="margin: 0 auto 16px; width: 145px;">
+          <p><strong>9 Ling Street, Marlborough, NH 03455</strong><br>
+          Office: 603-876-0004 · www.TheMarlboroughHouse.com · info@TheMarlboroughHouse.com</p>
+        </section>
+
+        <footer class="footer">
+          <span>The Marlborough House</span>
+          <span>Rachel Horner · July 2027</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
