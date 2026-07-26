@@ -251,6 +251,48 @@
       margin-top: 36px;
     }
 
+    .decor-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .decor-card {
+      background: #fffaf2;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      break-inside: avoid;
+    }
+
+    .decor-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .decor-caption {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+      padding: 12px 14px 14px;
+    }
+
+    .decor-caption strong {
+      color: var(--green);
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .decor-source {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 16px;
+    }
+
     .footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -306,6 +348,7 @@
         <div class="toc">
           <span>Event Overview & Timeline</span>
           <span>Ceremony & Reception Design</span>
+          <span>Decor & Inspiration</span>
           <span>À La Carte Pricing</span>
           <span>Terms & Signature</span>
         </div>
@@ -420,6 +463,7 @@
               <li>6 groomsman boutonnieres</li>
               <li>Parent corsages / additional personal flowers available on request (TBD)</li>
               <li>Event-wide florals & floral styling throughout ceremony, cocktail hour, and reception</li>
+              <li>Palette: monobotanical white, ivory, and pastel — Queen Anne's lace, black-eyed susans, lamb's ear, and summer herbs</li>
             </ul>
           </div>
         </div>
@@ -462,6 +506,90 @@
         <footer class="footer">
           <span>The Marlborough House</span>
           <span>Ceremony & Reception Design</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- DECOR & INSPIRATION -->
+    <section class="page">
+      <div class="page-inner">
+        <header class="section-header">
+          <div class="section-kicker">Visual Direction</div>
+          <h2>Decor & Inspiration</h2>
+          <p class="lead">A airy, youthful palette — monobotanical white, ivory, and pastel personal flowers; simple centerpieces with herbs and summer blooms; vignette seating under bistro lights. Venue photos from TheMarlboroughHouse.com; additional inspiration references shown for mood and scale.</p>
+        </header>
+
+        <div class="decor-grid">
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/tmh-main-hall-reception.jpeg" alt="Main Hall reception at The Marlborough House with tree-branch ceiling lighting">
+            <figcaption class="decor-caption">
+              <strong>Main Hall Reception — The Marlborough House</strong>
+              Tree-branch ceiling lighting and open floor plan — ideal for an in-the-round ceremony flip into vignette reception with central dance floor.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/web-bistro-lights-reception.jpg" alt="Reception with bistro string lights over lounge and dining vignettes">
+            <figcaption class="decor-caption">
+              <strong>Vignette Reception with Bistro Lights</strong>
+              Warm overhead bistro lights defining conversational seating zones — a reference for the mixed lounge and communal vignettes surrounding the dance floor.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/tmh-mixed-lounge-vignette.jpeg" alt="Mixed lounge vignette with vintage armchair at The Marlborough House">
+            <figcaption class="decor-caption">
+              <strong>Mixed Lounge Vignette — The Marlborough House</strong>
+              Loveseats, one-off chairs, and styled seating corners — the feel of the 5 mixed lounge sections for 10 guests each.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/tmh-main-hall-vignette-stage.jpeg" alt="Main Hall stage vignette with vintage seating at The Marlborough House">
+            <figcaption class="decor-caption">
+              <strong>Stage Vignettes — Main Hall</strong>
+              Conversational seating on the stage, framed by stained glass and soft draping — part of the 110-guest vignette layout.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/tmh-queen-annes-lace-florals.jpeg" alt="Queen Anne's lace and summer florals at The Marlborough House">
+            <figcaption class="decor-caption">
+              <strong>Summer Florals at TMH — Queen Anne's Lace</strong>
+              Airy, simple styling with Queen Anne's lace and garden blooms — reference for centerpieces with herbs, black-eyed susans, and lamb's ear.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/web-pastel-monobotanical-flowers.jpg" alt="Monobotanical white and pastel floral inspiration">
+            <figcaption class="decor-caption">
+              <strong>Personal Flowers — Monobotanical White & Pastel</strong>
+              Bride, bridesmaids, and boutonnieres in clean ivory and blush tones — loose, youthful, and personal.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/web-pastel-bouquet-inspiration.jpg" alt="Pastel bridal bouquet inspiration with garden roses and peonies">
+            <figcaption class="decor-caption">
+              <strong>Bridal Party Bouquet Palette</strong>
+              Soft ivory, blush, and pastel garden flowers for the personal flower suite — monobotanical moments mixed with seasonal texture.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/web-airy-table-florals.jpg" alt="Simple airy table florals in glass jars">
+            <figcaption class="decor-caption">
+              <strong>Simple Table Centerpieces</strong>
+              Low, airy arrangements in glass — white and blush blooms with herbs and garden texture for round-table vignettes.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="decor-source">Venue photography © The Marlborough House (TheMarlboroughHouse.com). Additional inspiration photography via Pexels (free stock).</p>
+
+        <footer class="footer">
+          <span>Rachel Horner Proposal</span>
+          <span>Decor & Inspiration</span>
         </footer>
       </div>
     </section>
