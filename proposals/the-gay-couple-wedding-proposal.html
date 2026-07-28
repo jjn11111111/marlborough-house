@@ -301,6 +301,52 @@
       margin-top: 16px;
     }
 
+    .mood-block {
+      background: #faf9f6;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      break-inside: avoid;
+      overflow: hidden;
+    }
+
+    .mood-block img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .mood-caption {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+      padding: 12px 14px 14px;
+    }
+
+    .mood-caption strong {
+      color: var(--midnight);
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .cover-mood {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      margin-top: 28px;
+      max-width: 720px;
+      overflow: hidden;
+    }
+
+    .cover-mood img {
+      aspect-ratio: 16 / 9;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
     .footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -405,6 +451,9 @@
         <p class="eyebrow">Event Proposal</p>
         <h1>The Gay Couple Wedding</h1>
         <p class="subtitle">A formal, Tom Ford–inspired celebration in midnight blue and gold — ceremony, cocktail hour, and table-side reception for 85 guests at The Marlborough House.</p>
+        <figure class="cover-mood">
+          <img src="../assets/gay-couple-proposal/inspiration-midnight-blue-gold-lounge.jpeg" alt="Midnight blue and gold lounge with velvet seating and marble accents">
+        </figure>
       </div>
 
       <div class="cover-band">
@@ -486,6 +535,14 @@
         <div class="note">
           <strong>Place settings.</strong> Each guest place setting will include a client-provided <strong>etched glass coat of arms</strong>, designed by one of the grooms. TMH will coordinate placement at each seat during table setup.
         </div>
+
+        <figure class="mood-block" style="margin-top: 20px;">
+          <img src="../assets/gay-couple-proposal/inspiration-luxe-gold-accent-lounge.jpeg" alt="Luxury lounge with gold pendant light and tailored black and cream styling">
+          <figcaption class="mood-caption">
+            <strong>Restrained Luxury</strong>
+            Sleek, tailored, quite formal — gold accents, polished surfaces, and curated detail throughout the event day.
+          </figcaption>
+        </figure>
 
         <footer class="footer">
           <span>The Gay Couple Proposal</span>
@@ -569,6 +626,13 @@
         </div>
 
         <div class="grid two" style="margin-top: 18px;">
+          <figure class="mood-block">
+            <img src="../assets/gay-couple-proposal/inspiration-tom-ford-velvet-lounge.jpeg" alt="Velvet lounge with emerald and navy seating, gold chandelier, and champagne">
+            <figcaption class="mood-caption">
+              <strong>Cocktail Hour Mood — Main House</strong>
+              Intimate, luxe gathering space — velvet textures, mixed metallics, and warm candlelight while guests enjoy charcuterie and spiked lemonade.
+            </figcaption>
+          </figure>
           <div class="card">
             <h3>Cocktail Hour — Main House</h3>
             <ul>
@@ -580,6 +644,16 @@
               <li>Full cash bar during reception (guests purchase drinks individually)</li>
             </ul>
           </div>
+        </div>
+
+        <div class="grid two" style="margin-top: 18px;">
+          <figure class="mood-block">
+            <img src="../assets/gay-couple-proposal/inspiration-formal-dining-candelabra.jpeg" alt="Formal navy dining room with candelabras and polished wood table">
+            <figcaption class="mood-caption">
+              <strong>Reception Mood — Table-Side Dinner</strong>
+              Formal seated service at banquet and round tables — candelabra warmth, midnight linens, and polished place settings with client coat of arms.
+            </figcaption>
+          </figure>
           <div class="card">
             <h3>Reception — Table-Side Dinner</h3>
             <ul>
