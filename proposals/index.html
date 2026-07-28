@@ -134,6 +134,28 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
+
+    .mobile-note {
+      background: rgba(49, 77, 66, 0.08);
+      border-left: 4px solid var(--green);
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 14px;
+      padding: 12px 14px;
+    }
+
+    @media (max-width: 768px) {
+      .wrap { padding: 28px 16px 48px; }
+      .card { padding: 28px 22px; border-radius: 18px; }
+      .logo { width: 180px; }
+      h1 { font-size: 1.65rem; }
+      .links { flex-direction: column; }
+      .btn {
+        min-height: 44px;
+        text-align: center;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,8 +173,9 @@
           <p class="proposal-meta">July 2027 (date TBD) · Concord, NH area · Package 3 · 110 guests · Full compound buyout · Alcohol-free</p>
           <div class="links">
             <a class="btn btn-primary" href="rachel-horner-wedding-proposal.html">View proposal (HTML)</a>
-            <a class="btn btn-secondary" href="rachel-horner-wedding-proposal.pdf">Download PDF</a>
+            <a class="btn btn-secondary" href="rachel-horner-wedding-proposal.pdf" download="Rachel-Horner-Wedding-Proposal.pdf">Download PDF (9 MB)</a>
           </div>
+          <p class="mobile-note">On phones, the HTML view is the best experience. The PDF opens in your browser viewer on iPhone and most Android devices — use Share → Save to Files (iOS) or Download (Android) to keep a copy.</p>
         </li>
       </ul>
 

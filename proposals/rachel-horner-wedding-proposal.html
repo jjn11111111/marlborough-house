@@ -305,6 +305,66 @@
       letter-spacing: 0.08em;
     }
 
+    @media (max-width: 768px) {
+      html { font-size: 14px; }
+
+      .document { padding: 16px 12px 40px; }
+      .page { border-radius: 18px; margin-bottom: 18px; }
+      .page-inner { padding: 24px 18px 28px; }
+
+      .cover { min-height: auto; }
+      .cover::before { inset: 14px; border-radius: 14px; }
+
+      .cover-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 18px 12px;
+      }
+
+      .logo { width: 200px; }
+      .contact-card { text-align: left; font-size: 11px; }
+
+      .cover-main { padding: 16px 18px 24px; }
+      h1 { font-size: 34px; line-height: 1.08; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 20px; }
+      .subtitle { font-size: 17px; }
+
+      .cover-band {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 0 18px 24px;
+        padding: 20px;
+      }
+
+      .cover-band strong { font-size: 20px; }
+      .lead { font-size: 15px; }
+
+      .grid.two { grid-template-columns: 1fr; }
+      .decor-grid { grid-template-columns: 1fr; }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .row .amount {
+        justify-self: start;
+        white-space: normal;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
     @media print {
       @page { size: Letter; margin: 0.42in; }
       html, body { background: #fffdf8 !important; font-size: 12.2px; }
