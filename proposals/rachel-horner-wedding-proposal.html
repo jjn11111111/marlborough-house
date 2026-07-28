@@ -299,6 +299,52 @@
       margin-top: 16px;
     }
 
+    .mood-block {
+      background: #fffaf2;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      break-inside: avoid;
+      overflow: hidden;
+    }
+
+    .mood-block img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .mood-caption {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+      padding: 12px 14px 14px;
+    }
+
+    .mood-caption strong {
+      color: var(--green);
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .cover-mood {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      margin-top: 28px;
+      max-width: 720px;
+      overflow: hidden;
+    }
+
+    .cover-mood img {
+      aspect-ratio: 16 / 9;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
     .footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -312,63 +358,144 @@
     }
 
     @media (max-width: 768px) {
-      html { font-size: 14px; }
+      html { font-size: 14px; -webkit-text-size-adjust: 100%; }
 
-      .document { padding: 16px 12px 40px; }
-      .page { border-radius: 18px; margin-bottom: 18px; }
-      .page-inner { padding: 24px 18px 28px; }
+      body { overflow-x: hidden; }
+
+      .document { padding: 10px 8px 32px; max-width: 100%; }
+      .page {
+        border-radius: 14px;
+        margin-bottom: 14px;
+        box-shadow: 0 8px 24px rgba(44, 32, 23, 0.08);
+      }
+      .page-inner { padding: 20px 16px 24px; }
 
       .cover { min-height: auto; }
-      .cover::before { inset: 14px; border-radius: 14px; }
+      .cover::before { inset: 10px; border-radius: 12px; }
 
       .cover-top {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-        padding: 24px 18px 12px;
+        gap: 12px;
+        padding: 20px 16px 10px;
       }
 
-      .logo { width: 200px; }
-      .contact-card { text-align: left; font-size: 11px; }
+      .logo { width: 168px; max-width: 72vw; }
+      .contact-card { text-align: left; font-size: 10px; letter-spacing: 0.06em; line-height: 1.5; }
 
-      .cover-main { padding: 16px 18px 24px; }
-      h1 { font-size: 34px; line-height: 1.08; }
-      h2 { font-size: 28px; }
-      h3 { font-size: 20px; }
-      .subtitle { font-size: 17px; }
+      .cover-main { padding: 12px 16px 18px; }
+      h1 { font-size: 32px; line-height: 1.1; max-width: none; }
+      h2 { font-size: 26px; line-height: 1.12; }
+      h3 { font-size: 19px; }
+      .subtitle { font-size: 16px; margin-top: 14px; max-width: none; }
+      .eyebrow { font-size: 10px; margin-bottom: 12px; }
+
+      .cover-mood {
+        margin-top: 18px;
+        max-width: none;
+        border-radius: 14px;
+      }
+
+      .cover-mood img { aspect-ratio: 4 / 3; }
 
       .cover-band {
         grid-template-columns: 1fr;
-        gap: 18px;
-        margin: 0 18px 24px;
-        padding: 20px;
+        gap: 14px;
+        margin: 0 12px 16px;
+        padding: 16px;
+        border-radius: 14px;
       }
 
-      .cover-band strong { font-size: 20px; }
-      .lead { font-size: 15px; }
+      .cover-band strong { font-size: 18px; }
+      .cover-band p { font-size: 13px; line-height: 1.5; }
+      .toc { font-size: 12px; gap: 8px; }
 
-      .grid.two { grid-template-columns: 1fr; }
-      .decor-grid { grid-template-columns: 1fr; }
+      .section-header { margin-bottom: 20px; padding-bottom: 14px; }
+      .section-kicker { font-size: 10px; }
+      .lead { font-size: 15px; max-width: none; }
+
+      .grid.two { grid-template-columns: 1fr; gap: 14px; }
+      .decor-grid { grid-template-columns: 1fr; gap: 14px; }
+
+      .card { padding: 16px; border-radius: 14px; }
+      .card ul { padding-left: 16px; }
+      .card li { font-size: 14px; margin-bottom: 6px; }
+
+      .mood-block { border-radius: 14px; }
+      .mood-block img { aspect-ratio: 4 / 3; }
+      .mood-caption { font-size: 12px; padding: 10px 12px 12px; line-height: 1.5; }
+
+      .decor-card { border-radius: 14px; }
+      .decor-card img { aspect-ratio: 4 / 3; }
+      .decor-caption { font-size: 12px; padding: 10px 12px 12px; line-height: 1.5; }
 
       .timeline-item {
         grid-template-columns: 1fr;
         gap: 4px;
+        padding: 10px 0;
       }
+
+      .timeline-time { font-size: 12px; }
+
+      .note { padding: 12px 14px; font-size: 13px; margin-top: 16px; line-height: 1.5; }
+
+      .table { border-radius: 14px; }
 
       .row {
         grid-template-columns: 1fr;
         gap: 4px;
+        padding: 10px 12px;
       }
 
+      .row strong { font-size: 14px; }
       .row .amount {
         justify-self: start;
         white-space: normal;
+        font-size: 15px;
       }
+
+      .row .desc { font-size: 12px; line-height: 1.45; }
+      .row.total .amount { font-size: 18px; }
+
+      .fine-print { font-size: 11px; line-height: 1.5; }
+      .policy-list { font-size: 12px; }
+      .policy-list li { margin-bottom: 8px; }
+      .decor-source { font-size: 10px; line-height: 1.5; }
 
       .footer {
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
+        font-size: 10px;
+        margin-top: 22px;
       }
+
+      .signature-block { gap: 20px; margin-top: 20px; }
+      .signature-line { margin-top: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      html { font-size: 13px; }
+
+      .document { padding: 6px 4px 24px; }
+      .page-inner { padding: 16px 12px 20px; }
+
+      .cover-top { padding: 16px 12px 8px; }
+      .cover-main { padding: 10px 12px 14px; }
+      .logo { width: 148px; }
+
+      h1 { font-size: 28px; }
+      h2 { font-size: 23px; }
+      h3 { font-size: 17px; }
+      .subtitle { font-size: 15px; }
+
+      .cover-band { margin: 0 8px 12px; padding: 14px; }
+      .cover-band strong { font-size: 17px; }
+
+      .card { padding: 14px; }
+      .tag { font-size: 10px; }
+
+      .mood-caption strong { font-size: 12px; }
+      .decor-caption strong { font-size: 12px; }
     }
 
     @media print {
@@ -403,6 +530,9 @@
         <p class="eyebrow">Event Proposal</p>
         <h1>Rachel Horner Wedding</h1>
         <p class="subtitle">A custom Package 3 celebration with full compound buyout, an in-the-round ceremony, and a vignette-style reception for 110 guests — alcohol-free throughout.</p>
+        <figure class="cover-mood">
+          <img src="../assets/rachel-proposal/inspiration-mixed-lounge-bistro-lights.jpeg" alt="Mixed lounge vignette with velvet seating, bistro lights, and floral centerpieces">
+        </figure>
       </div>
 
       <div class="cover-band">
@@ -491,6 +621,14 @@
           <strong>Alcohol-free event.</strong> This celebration will not include bar service of any kind. All beverage service is non-alcoholic: cucumber water, iced tea, lemonade, and coffee & tea with dessert.
         </div>
 
+        <figure class="mood-block" style="margin-top: 20px;">
+          <img src="../assets/rachel-proposal/inspiration-rustic-outdoor-lounge.jpeg" alt="Rustic outdoor lounge vignette with wooden sofa, faux fur, and garden florals on a cream rug">
+          <figcaption class="mood-caption">
+            <strong>Vignette Reception Mood</strong>
+            Collected lounge furniture, rugs, and soft florals surrounding the central dance floor — the scale and feel for 11 vignette sections seating 110 guests throughout Main Hall.
+          </figcaption>
+        </figure>
+
         <footer class="footer">
           <span>Rachel Horner Proposal</span>
           <span>Event Overview</span>
@@ -548,6 +686,13 @@
         </div>
 
         <div class="grid two" style="margin-top: 18px;">
+          <figure class="mood-block">
+            <img src="../assets/rachel-proposal/inspiration-garden-lounge-vignette.jpeg" alt="Garden lounge vignette with wicker seating, white poufs, and rug on grass">
+            <figcaption class="mood-caption">
+              <strong>Mixed Lounge Vignettes</strong>
+              Loveseats, one-off chairs, ottomans, and occasional tables — reference for the 5 mixed lounge sections seating 10 guests each, including stage placement.
+            </figcaption>
+          </figure>
           <div class="card">
             <h3>Cocktail Hour — Main House</h3>
             <ul>
@@ -557,6 +702,16 @@
               <li>Fresh lemonade</li>
             </ul>
           </div>
+        </div>
+
+        <div class="grid two" style="margin-top: 18px;">
+          <figure class="mood-block">
+            <img src="../assets/rachel-proposal/inspiration-mixed-lounge-bistro-lights.jpeg" alt="Lounge vignette with velvet chairs, bistro lights, and candlelit florals">
+            <figcaption class="mood-caption">
+              <strong>Vignette Reception — Bistro Lights</strong>
+              Warm bistro lighting, mixed seating, and simple florals — round-table, high communal, and lounge vignettes surrounding the open dance floor.
+            </figcaption>
+          </figure>
           <div class="card">
             <h3>Reception — Action Stations</h3>
             <ul>
@@ -582,7 +737,7 @@
         <header class="section-header">
           <div class="section-kicker">Visual Direction</div>
           <h2>Decor & Inspiration</h2>
-          <p class="lead">A airy, youthful palette — monobotanical white, ivory, and pastel personal flowers; simple centerpieces with herbs and summer blooms; vignette seating under bistro lights. Venue photos from TheMarlboroughHouse.com; additional inspiration references shown for mood and scale.</p>
+          <p class="lead">An airy, youthful palette — monobotanical white, ivory, and pastel personal flowers; simple centerpieces with herbs and summer blooms; vignette seating under bistro lights. Venue photos from TheMarlboroughHouse.com; additional inspiration photography provided by client.</p>
         </header>
 
         <div class="decor-grid">
@@ -595,18 +750,26 @@
           </figure>
 
           <figure class="decor-card">
-            <img src="../assets/rachel-proposal/rachel-bistro-floor-cushion-reception.jpg" alt="Outdoor reception with bistro lights and floor-cushion dining vignettes">
+            <img src="../assets/rachel-proposal/inspiration-mixed-lounge-bistro-lights.jpeg" alt="Mixed lounge vignette with velvet seating and bistro lights">
             <figcaption class="decor-caption">
               <strong>Vignette Reception with Bistro Lights</strong>
-              Low picnic-style tables on rugs with floor cushions, warm bistro lights overhead, and simple floral centerpieces — the feel of Rachel's mixed lounge and communal vignettes surrounding the dance floor.
+              Mixed seating, warm bistro lights, and simple florals — round-table, high communal, and lounge vignettes surrounding the dance floor.
             </figcaption>
           </figure>
 
           <figure class="decor-card">
-            <img src="../assets/rachel-proposal/rachel-mixed-lounge-vignette.jpg" alt="Mixed lounge vignette with vintage sofa and armchairs">
+            <img src="../assets/rachel-proposal/inspiration-garden-lounge-vignette.jpeg" alt="Garden lounge vignette with wicker seating and white poufs on a rug">
             <figcaption class="decor-caption">
               <strong>Mixed Lounge Vignette</strong>
               Loveseats, one-off chairs, ottomans, and styled seating corners — reference for the 5 mixed lounge sections seating 10 guests each.
+            </figcaption>
+          </figure>
+
+          <figure class="decor-card">
+            <img src="../assets/rachel-proposal/inspiration-rustic-outdoor-lounge.jpeg" alt="Rustic outdoor lounge with wooden sofa, faux fur, and garden florals">
+            <figcaption class="decor-caption">
+              <strong>Collected Lounge Styling</strong>
+              Eclectic furniture, rugs, and soft accents — the relaxed, youthful feel for vignette groupings throughout Main Hall.
             </figcaption>
           </figure>
 
@@ -643,7 +806,7 @@
           </figure>
         </div>
 
-        <p class="decor-source">Venue photography © The Marlborough House (TheMarlboroughHouse.com). Additional inspiration photography via Pexels (free stock).</p>
+        <p class="decor-source">Venue photography © The Marlborough House (TheMarlboroughHouse.com). Additional inspiration photography provided by client.</p>
 
         <footer class="footer">
           <span>Rachel Horner Proposal</span>
