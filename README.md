@@ -10,6 +10,8 @@ These URLs stay live as long as this repo is published. No local server or port 
 | --- | --- |
 | **Packages & menu** | https://jjn11111111.github.io/marlborough-house/ |
 | **Client proposals hub** | https://jjn11111111.github.io/marlborough-house/proposals/ |
+| **Amanda Bolduc — HTML** | https://jjn11111111.github.io/marlborough-house/proposals/amanda-bolduc-wedding-proposal.html |
+| **Amanda Bolduc — PDF** | https://jjn11111111.github.io/marlborough-house/proposals/amanda-bolduc-wedding-proposal.pdf |
 | **Rachel Horner — HTML** | https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.html |
 | **Rachel Horner — PDF** | https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.pdf |
 
@@ -38,6 +40,7 @@ git add proposals/rachel-horner-wedding-proposal.pdf && git commit -m "Update Ra
 
 | Client | HTML | PDF |
 | --- | --- | --- |
+| Amanda Bolduc — Package 3, 100 guests | [View](https://jjn11111111.github.io/marlborough-house/proposals/amanda-bolduc-wedding-proposal.html) | [Download](https://jjn11111111.github.io/marlborough-house/proposals/amanda-bolduc-wedding-proposal.pdf) |
 | Rachel Horner — July 2027, Package 3, 110 guests | [View](https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.html) | [Download](https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.pdf) |
 
-Source: `proposals/rachel-horner-wedding-proposal.html`
+Source files: `proposals/amanda-bolduc-wedding-proposal.html`, `proposals/rachel-horner-wedding-proposal.html`
