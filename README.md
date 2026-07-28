@@ -4,9 +4,10 @@ Client-facing HTML and PDF version of The Marlborough House wedding packages and
 
 ## Public Site
 
-When GitHub Pages is enabled for this repo, the HTML document will be available at:
+GitHub Pages serves this repo at:
 
-`https://kdumanski.github.io/marlborough-house/`
+- **Packages & menu:** https://jjn11111111.github.io/marlborough-house/
+- **Rachel Horner proposal (preview):** https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.html
 
 ## Files
 
@@ -18,4 +19,8 @@ When GitHub Pages is enabled for this repo, the HTML document will be available 
 
 ## Client Proposals
 
-- `proposals/rachel-horner-wedding-proposal.html` — Rachel Horner, July 2027, Package 3, full compound buyout
+| Client | Preview link |
+| --- | --- |
+| Rachel Horner — July 2027, Package 3, 110 guests | https://jjn11111111.github.io/marlborough-house/proposals/rachel-horner-wedding-proposal.html |
+
+Source file: `proposals/rachel-horner-wedding-proposal.html`
