@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Marlborough House | Client Proposals</title>
+  <style>
+    :root {
+      --paper: #fbf7ef;
+      --surface: #fffdf8;
+      --ink: #27211b;
+      --muted: #6e6256;
+      --gold: #e4a915;
+      --line: #e7dccb;
+      --shadow: 0 14px 35px rgba(44, 32, 23, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(228, 169, 21, 0.12), transparent 34rem),
+        linear-gradient(180deg, #fffaf0 0%, var(--paper) 38%, #f7efe4 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 40px 44px;
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin: 0 0 32px;
+      max-width: 36em;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .back:hover { color: var(--ink); }
+
+    .proposal-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .proposal-item {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      background: #fff;
+    }
+
+    .proposal-item h2 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+    }
+
+    .proposal-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn:hover { opacity: 0.92; }
+
+    .note {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html">← Packages &amp; catering menu</a>
+
+    <article class="card">
+      <img class="logo" src="../assets/marlborough-house-logo.png" alt="The Marlborough House logo">
+      <h1>Client Proposals</h1>
+      <p class="lead">Custom wedding proposal decks for The Marlborough House. Each link below is a permanent preview — bookmark or share with clients.</p>
+
+      <ul class="proposal-list">
+        <li class="proposal-item">
+          <h2>Rachel Horner Wedding</h2>
+          <p class="proposal-meta">July 2027 (date TBD) · Concord, NH area · Package 3 · 110 guests · Full compound buyout · Alcohol-free</p>
+          <div class="links">
+            <a class="btn btn-primary" href="rachel-horner-wedding-proposal.html">View proposal (HTML)</a>
+            <a class="btn btn-secondary" href="rachel-horner-wedding-proposal.pdf">Download PDF</a>
+          </div>
+        </li>
+      </ul>
+
+      <p class="note">Hosted on GitHub Pages. Links remain active as long as this repository is published.</p>
+    </article>
+  </div>
+</body>
+</html>
