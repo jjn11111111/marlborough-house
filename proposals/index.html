@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Marlborough House | Client Proposals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #fbf7ef;
@@ -14,13 +17,15 @@
       --green: #314d42;
       --line: #e7dccb;
       --shadow: 0 14px 35px rgba(44, 32, 23, 0.10);
+      --font-body: "Oswald", "Segoe UI", Arial, sans-serif;
+      --font-display: "Bebas Neue", "Oswald", sans-serif;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-family: var(--font-body);
       font-size: 15px;
       line-height: 1.55;
       color: var(--ink);
@@ -53,9 +58,10 @@
 
     h1 {
       margin: 0 0 8px;
+      font-family: var(--font-display);
       font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      font-weight: 400;
+      letter-spacing: 0.02em;
     }
 
     .lead {
